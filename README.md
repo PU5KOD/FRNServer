@@ -43,27 +43,23 @@
 ```
 cd /usr/src/ && sudo wget https://github.com/PU5KOD/FRNServer/raw/main/Server/FRNServerConsole.Linux-aarch64.7348r.tgz
 ```
-* 2. Unzip the project files:
+* 2. Unzip project and remove unnecessary file:
 ```
-sudo tar -zxvf FRNServerConsole.Linux-aarch64.7348r.tgz
+sudo tar -zxvf FRNServerConsole.Linux-aarch64.7348r.tgz && sudo rm FRNServerConsole.Linux-aarch64.7348r.tgz
 ```
-* 3. Remove unnecessary file:
-```
-sudo rm FRNServerConsole.Linux-aarch64.7348r.tgz
-```
-* 4. Change name go to new directory:
+* 3. Change name go to new directory:
 ```
 sudo mv FRNServerConsole.Linux-aarch64.7348r FRNServer && cd FRNServer
 ```
-* 5. Change filename of the main file:
+* 4. Change filename of the main file:
 ```
 sudo mv FRNServerConsole.Linux-aarch64.r7348 FRNServer
 ```
-* 6. Copy service file to system:
+* 5. Copy service file to system:
 ```
 sudo wget https://github.com/PU5KOD/FRNServer/raw/main/frn.service && sudo cp frn.service /etc/systemd/system/
 ```
-* 7. Enable the service:
+* 6. Enable the service:
 ```
 sudo systemctl enable frn.service
 ```
