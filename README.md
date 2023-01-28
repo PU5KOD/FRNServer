@@ -39,31 +39,31 @@
 
 ### **To install the 64bit server as a service that starts automatically, follow the steps below:**
 
-* Create directory and download the project files:
+* 1. Create directory and download the project files:
 ```
 cd /usr/src/ && sudo wget https://github.com/PU5KOD/FRNServer/raw/main/Server/FRNServerConsole.Linux-aarch64.7348r.tgz
 ```
-* Unzip the project files:
+* 2. Unzip the project files:
 ```
 sudo tar -zxvf FRNServerConsole.Linux-aarch64.7348r.tgz
 ```
-* Remove unnecessary file:
+* 3. Remove unnecessary file:
 ```
 sudo rm FRNServerConsole.Linux-aarch64.7348r.tgz
 ```
-* Change name go to new directory:
+* 4. Change name go to new directory:
 ```
-sudo mv FRNServerConsole.Linux-armhf.7348r FRNServer && cd FRNServer
+sudo mv FRNServerConsole.Linux-aarch64.7348r FRNServer && cd FRNServer
 ```
-* Change filename of the main file:
+* 5. Change filename of the main file:
 ```
-sudo mv FRNServerConsole.Linux-armhf.r7348 FRNServer
+sudo mv FRNServerConsole.Linux-aarch64.r7348 FRNServer
 ```
-* Copy service file to system:
+* 6. Copy service file to system:
 ```
-sudo cp frn.service /etc/systemd/system/
+sudo wget https://github.com/PU5KOD/FRNServer/raw/main/frn.service && sudo cp frn.service /etc/systemd/system/
 ```
-* Enable the service:
+* 7. Enable the service:
 ```
 sudo systemctl enable frn.service
 ```
