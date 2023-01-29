@@ -1,5 +1,5 @@
 # FRNServer
-## Files for make a Free Radio Network Server/Client.
+## Files to make a Free Radio Network Server/Client.
 ### **1. SERVER:**
 ### **1.1. AlterFRN server, revision 7348, 2022-10-13:**
 
@@ -11,7 +11,6 @@
 
 * Linux-armv7 (Linux/ARMv7 32bit) RaspberryPi, OrangePi, ... 32bit
   >http://alterfrn.ucoz.ru/S7348/FRNServerConsole.Linux-armv7.7348r.tgz
-
 
 
 ### **1.2. AlterFRN Server, revision 6584, 2021-01-22:**
@@ -36,32 +35,32 @@
   >http://alterfrn.ucoz.ru/C7312/FRNClientConsole.Linux-armv7.7312r.tgz
 
 
-
 ### **To install the 64bit server as a service that starts automatically, follow the steps below:**
 
-* 1. Create directory and download the project files:
+* 01. Create directory and download project files:
 ```
 cd /usr/src/ && sudo wget https://github.com/PU5KOD/FRNServer/raw/main/Server/FRNServerConsole.Linux-aarch64.7348r.tgz
 ```
-* 2. Unzip project and remove unnecessary file:
+* 02. Unzip project files and remove unnecessary file:
 ```
 sudo tar -zxvf FRNServerConsole.Linux-aarch64.7348r.tgz && sudo rm FRNServerConsole.Linux-aarch64.7348r.tgz
 ```
-* 3. Change name go to new directory:
+* 03. Change directory name and access it:
 ```
 sudo mv FRNServerConsole.Linux-aarch64.7348r FRNServer && cd FRNServer
 ```
-* 4. Change filename of the main file:
+* 04. Change the main file name:
 ```
 sudo mv FRNServerConsole.Linux-aarch64.r7348 FRNServer
 ```
-* 5. Copy service file to system:
+* 05. Copy the service file to the machine:
 ```
 sudo wget https://github.com/PU5KOD/FRNServer/raw/main/frn.service && sudo cp frn.service /etc/systemd/system/
 ```
-* 6. Enable the service:
+* 06. Enable the service:
 ```
 sudo systemctl enable frn.service
 ```
 
-Once installed, the service can be modified by changing the above command parameters with `ENABLE`, `DISABLE`, `STATUS`, `START`, `RESTART` and `STOP`. For other versions of the server/client, simply substitute the location of the source file in the commands described above.
+Once installed, the service can be modified by changing the #06 command parameters with `ENABLE`, `DISABLE`, `STATUS`, `START`, `RESTART` and `STOP`.
+To install other server/client versions, simply replace the source file link in the commands described above.
